@@ -161,13 +161,50 @@ img {
   background-color: var(--first-color);
 }
 
-.nav__logo {
+
+/* .nav__logo {
   color: var(--second-color);
   padding: 8px 16px;
   border: 2px solid #333 ;
   border-radius: 10px;
+} */
 
+/* demo */
+.nav__logo {
+  padding: 8px 16px;
+  color: #fff;
+  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  background-size: 400%;
+  border-radius: 10px;
+  outline: none;
+  animation: animate 6s linear infinite;
 }
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.nav__logo::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+/* end demo */
 
 .nav__toggle {
   color: var(--second-color);
