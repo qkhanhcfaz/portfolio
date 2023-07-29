@@ -55,4 +55,24 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
+//view post
+var viewCount = 5.996;
+document.getElementById("view-count").innerHTML = viewCount.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+window.onload = function() {
+    viewCount++;
+};
 
+//Store the view count in a cookie
+function setViewCountCookie() {
+    var expires = new Date();
+    expires.setDate(expires.getDate() + 365);
+    document.cookie = "viewCount="+viewCount + "; expires=" + expires.toUTCString()
+}
+
+// Display the view count
+function displayViewCount() {
+    var icon = '<i class="fa-regular fa-eye"></i>' + viewCount;
+    document.getElementById("view-count").innerHTML = icon;   
+}
+setViewCountCookie();
+displayViewCount();
