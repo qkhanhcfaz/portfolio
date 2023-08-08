@@ -425,6 +425,17 @@ img {
   margin-left: auto;
 }
 
+#date { 
+  box-sizing: border-box; 
+  font-size:20px;
+  font-weight: bold;
+  color: #666;
+  border: none;
+  outline: none;
+  padding: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+}
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
@@ -608,7 +619,10 @@ img {
   #view-count { 
     transform: translateY(-40px);
   }
-  
+  #date {
+    margin-left: var(--mb-2);
+  }
+
 }
 
   
@@ -672,7 +686,7 @@ img {
   .loader {
     top: 81%;
     font-size:0.7rem;
-    margin-left: 19%;
+    margin-left: calc(19% +4px);
     flex-direction: row;
   }
 }

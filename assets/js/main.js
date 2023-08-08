@@ -1,3 +1,4 @@
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -56,12 +57,11 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 //view post
-var viewCount = 5.996;
-document.getElementById("view-count").innerHTML = viewCount.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-window.onload = function() {
+var viewCount = 6000;
+setTimeout(() => {
     viewCount++;
-};
-
+    document.getElementById("view-count").innerHTML = viewCount;
+}, 3600000)
 //Store the view count in a cookie
 function setViewCountCookie() {
     var expires = new Date();
@@ -76,3 +76,10 @@ function displayViewCount() {
 }
 setViewCountCookie();
 displayViewCount();
+
+//get date
+const today = new Date();
+
+//show date
+document.getElementById("date").innerHTML = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+
