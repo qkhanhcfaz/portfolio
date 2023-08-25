@@ -57,29 +57,35 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 //view post
-var viewCount = 6000;
-setTimeout(() => {
+let viewCount = 6009;
+let viewList = [];
+setInterval(() => {
     viewCount++;
-    document.getElementById("view-count").innerHTML = viewCount;
-}, 3600000)
-//Store the view count in a cookie
+    viewList.push(viewCount);
+    setViewCountCookie();
+    displayViewCount();
+}, 30000)
+document.getElementById("view-count").innerHTML = viewCount;
+//Store the view count in localStorage
 function setViewCountCookie() {
-    var expires = new Date();
-    expires.setDate(expires.getDate() + 365);
-    document.cookie = "viewCount="+viewCount + "; expires=" + expires.toUTCString()
+   localStorage.setItem("viewCount", viewCount);
+   localStorage.setItem("viewList", viewList);
 }
 
 // Display the view count
 function displayViewCount() {
-    var icon = '<i class="fa-regular fa-eye"></i>' + viewCount;
+    var icon = '<i class="fa-regular fa-eye"></i>' + localStorage.getItem("viewCount");
     document.getElementById("view-count").innerHTML = icon;   
 }
 setViewCountCookie();
 displayViewCount();
+
+
 
 //get date
 const today = new Date();
 
 //show date
 document.getElementById("date").innerHTML = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+
 
