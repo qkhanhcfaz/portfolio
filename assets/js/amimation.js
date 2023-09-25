@@ -5,3 +5,4 @@
 //     confetti();
 // }
 // document.getElementsByClassName(".confetti").addEventListener("click",party);
+

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/toast.css">
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -42,6 +43,7 @@
 
                     <!-- ===== View ===== -->
                     <span id="view-count"></span>
+                    <script src="assets/js/viewCount.js"></script>
                     <!-- ================== -->
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Khanh Tran</span><br> Web Designer</h1>
                     <a href="#contact" class="button">Contact</a> 
@@ -182,16 +184,21 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
+                    <form action="receiveInfo.php" method="POST"class="contact__form">
                         <input type="text" placeholder="Name" class="contact__input">
                         <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Confirm" class="contact__button button" >
-                        <!-- New code -->
-                        <span onclick ="showInfoToast();" id="toast" class="btn btn--info">click</span>
-                        <!-- End new code -->
+                        <textarea name="discription" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input onclick="showInfoToast();"type="button" value="Confirm" class="contact__button button" >
+                       <!-- code of php
+                        <script src="getInfoUser.php"></script>
+                        <script src="receiveInfo.php"></script> -->
+        
                     </form>
                     <span id="date"></span>
+                </div>
+                    <!-- ==== TOAST MESSAGE==== -->
+                <div id="toast">
+                    <script src="assets/js/toast.js"></script>
                 </div>
             </section>
         </main>
