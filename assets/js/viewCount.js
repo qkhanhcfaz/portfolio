@@ -1,12 +1,12 @@
 //view post
-let viewCount = 6009;
+let viewCount = 6012;
 let viewList = [];
 setInterval(() => {
     viewCount++;
     viewList.push(viewCount);
     setViewCountCookie();
     displayViewCount();
-}, 30000)
+}, 60000)
 document.getElementById("view-count").innerHTML = viewCount;
 //Store the view count in localStorage
 function setViewCountCookie() {

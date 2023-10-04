@@ -1,11 +1,13 @@
-// party 
+// ==== Party =====
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 function party() {
-    confetti();
-
-//    setTimeout(party, 4000);
+    confetti({
+        particleCount: 100,
+        spread: 360,
+        startVelocity: 30,
+        decay: 0.9
+    });
 }
-
 
 export default party()
