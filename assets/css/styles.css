@@ -24,6 +24,8 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
+/* === COLOR === */
+  --blue-color: #4255FF;
 }
 
 @media screen and (min-width: 968px) {
@@ -71,6 +73,7 @@ img {
   height: auto;
   display: block;
 }
+
 
 /*===== CLASS CSS ===== */
 .section-title {
@@ -137,7 +140,12 @@ img {
     background-color: var(--second-color);
     transition: .5s;
   }
+  body.dark .nav__menu {
+    background-color: #079992
+  }
+
 }
+
 
 .nav__item {
   margin-bottom: var(--mb-4);
@@ -260,7 +268,7 @@ img {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 .home__social-icon:hover {
@@ -294,6 +302,100 @@ img {
   border-radius: .5rem;
   transition: .3s;
 }
+
+/* ==== DARK MODE ==== */
+body.dark {
+  background-color: #131F24;
+  color: #fff;
+}
+
+body.dark header {
+  background-color: #131F24;
+}
+
+body.dark header .nav__link {
+  color: #fff;
+}
+
+body.dark header #switch__mode {
+  color: #FFD900;
+}
+
+body.dark #view-count .fa-eye {
+  color: rgb(255,215,0);
+}
+body.dark .button {
+  background-color: var(--blue-color);
+}
+
+body.dark .home__title-color {
+  color: #56C802;
+}
+
+body.dark  .home__social-icon .bxl-linkedin {
+  color: #FED84E;
+}
+
+body.dark  .home__social-icon .bxl-behance {
+  color: #1CB0F6;
+}
+
+body.dark  .home__social-icon .bxl-github {
+  color: #43B487;
+}
+
+
+body.dark .section-title {
+  color: #4cd137;
+}
+
+body.dark .footer {
+  background-color: #202F36;
+}
+
+body.dark .footer__icon .bxl-instagram {
+  color: #eb3b5a;
+}
+
+body.dark .footer__icon .bxl-facebook {
+  color: var(--blue-color);
+}
+
+body.dark .footer__copy {
+  color: #A3CB38;
+}
+#switch__mode .bi-brightness-high-fill {
+  font-size: 22px;
+}
+
+ #switch__mode {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#switch__mode i {
+  font-size: 18px;
+}
+
+#switch__mode .bi-moon-stars-fill {
+  color:#ffa801;
+}
+
+/* ====COLOR FOR BUTTON MENU==== */
+body.dark .nav__toggle .bx-menu {
+  color: #fff;
+}
+
+/* BACKGROUND COLOR FOR LIST */
+
+body.dark #view-count,
+body.dark #date {
+  color: #78e08f;
+}
+
+            /* END DARK MODE */
 
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
@@ -694,6 +796,7 @@ img {
     margin-left: calc(19% +4px);
     flex-direction: row;
   }
+  
 }
 
 
@@ -718,6 +821,7 @@ img {
   margin-left: 90%;
   transform: translateY(-50px);
   }
+  
 }
 
 

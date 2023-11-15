@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,9 +11,10 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <title>Portfolio Khanh Tran</title>
     </head>
-    <body>
+    <body class="dark">
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -27,6 +29,9 @@
                         <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
                         <li class="nav__item"><a href="#work" class="nav__link">Blog</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <button id="switch__mode" class="nav__item">
+                            <i class="bi bi-brightness-high-fill"></i>
+                        </button>
                     </ul>
                 </div>
 
@@ -73,7 +78,7 @@
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title ">About</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -189,9 +194,6 @@
                         <input type="mail" placeholder="Email" class="contact__input">
                         <textarea name="discription" id="" cols="0" rows="10" class="contact__input"></textarea>
                         <input onclick="showInfoToast();"type="button" value="Confirm" class="contact__button button" >
-                       <!-- code of php
-                        <script src="getInfoUser.php"></script>
-                        <script src="receiveInfo.php"></script> -->
                         </form>
                     <span id="date"></span>
                 </div>
@@ -219,7 +221,12 @@
         
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/darkMode.js"></script>
         <script type="module" src="assets/js/amimation.js"></script>
         <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/confettijs/1.2.0/confetti.js"></script>
     </body>
+    <?php  
+    include('getInfoUser.php');             
+    include('receiveInfo.php');             
+?>
 </html>
