@@ -20,6 +20,6 @@ switch__mode.addEventListener('click',() => {
     switch__mode.classList.toggle('bi-brightness-high-fill')
 
     let mode = body.classList.toggle('dark')
-    //save mode 
+    //SAVE MODE 
     localStorage.setItem('darkmode',mode)
 })
